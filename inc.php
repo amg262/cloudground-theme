@@ -14,15 +14,17 @@
 
 function scan_movies() {
 
-	$path = '/Users/andy/Web/cloudground-theme';
+	$path = '/Users/andy/Web/cloudground-theme/mov';
 	$dirs = scandir( $path, SCANDIR_SORT_NONE );
 	var_dump( $dirs );
 
 
 	foreach ( $dirs[1] as $dir ) {
-		$arr = explode( ' ', $dir );
+		$arr = expxlode( ' ', $dir );
 
-		echo $arr;
+		$str = str_split($dir);
+		//echo $arr[1];
+		echo $str[0];
 	}
 
 
